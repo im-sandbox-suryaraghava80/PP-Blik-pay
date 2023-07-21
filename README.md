@@ -1,1 +1,1 @@
-# PP-Apple-pay
+# PP-Blik-pay
