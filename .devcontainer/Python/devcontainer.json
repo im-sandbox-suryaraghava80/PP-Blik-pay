@@ -1,6 +1,6 @@
 // For more details, see https://aka.ms/devcontainer.json.
 {
-  "name": "Blik Python Web App",
+  "name": "Paying with Blik or Paypal on the web",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}/workspaces/Python",
   "image": "mcr.microsoft.com/devcontainers/python:3",
   "postCreateCommand": "pip install -r requirements.txt",
