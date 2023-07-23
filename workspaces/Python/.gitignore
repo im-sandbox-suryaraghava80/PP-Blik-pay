@@ -1,5 +1,4 @@
 .env
-/package-lock.json
 .idea
 .DS_STORE
 .eslintcache
@@ -8,3 +7,4 @@
 node_modules
 dist
 .cache
+
