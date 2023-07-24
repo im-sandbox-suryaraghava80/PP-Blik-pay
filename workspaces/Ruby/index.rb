@@ -7,7 +7,7 @@ require 'launchy'
 require_relative './oauth'
 require_relative './config'
 
-set :port, ENV['PORT'] || 9000
+
 
 set :public_folder, File.dirname(__FILE__) + '/views'
 set :bind, 'localhost'
@@ -100,8 +100,11 @@ end
 
 
 if __FILE__ == $0
-  puts "Starting server on port #{settings.port}..."
-  puts "Example app listening at http://localhost:#{settings.port}"
+  port = ENV['PORT'] || 9880
+  puts "Starting server on port #{port}..."
+  
   # Open the default web browser
-  Launchy.open("http://localhost:#{settings.port}/")
+  Launchy.open("http://localhost:#{port}/")
+
+  set :port, port
 end
