@@ -5,7 +5,7 @@
     "image": "mcr.microsoft.com/devcontainers/ruby:2",
     "postCreateCommand": "bundle install",
     "postAttachCommand": {
-      "Start server": "ruby index.rb"
+      "Start server": "ruby sample.rb"
     },
     "forwardPorts": [
       8080
