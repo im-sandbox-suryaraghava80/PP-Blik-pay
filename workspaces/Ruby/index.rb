@@ -7,7 +7,7 @@ require 'launchy'
 require_relative './oauth'
 require_relative './config'
 
-set :port, ENV['PORT'] || 8080
+set :port, ENV['PORT'] || 9000
 
 set :public_folder, File.dirname(__FILE__) + '/views'
 set :bind, 'localhost'
