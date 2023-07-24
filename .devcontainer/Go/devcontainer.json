@@ -2,7 +2,7 @@
 {
   "name": "Go: Paying with Blik",
   "workspaceFolder": "/workspaces/PayPal-Codespaces/workspaces/Go",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "image": "mcr.microsoft.com/devcontainers/go:1.16",
   "forwardPorts": [
     8080
   ],
