@@ -1,10 +1,18 @@
 require 'rubygems'
-require 'dotenv/load'
+require 'dotenv'
+Dotenv.load()
 
 NODE_ENV = ENV['NODE_ENV']
 CLIENT_ID = ENV['CLIENT_ID']
 CLIENT_SECRET = ENV['CLIENT_SECRET']
 is_prod = NODE_ENV == "production"
 
-PAYPAL_API_BASE = is_prod ? "https://api.paypal.com" : "https://api.sandbox.paypal.com"
+if is_prod
+    PAYPAL_API_BASE = "https://api.sample.com"
+else
+    PAYPAL_API_BASE = "https://api.sandbox.sample.com"
+end
 
+puts "CLIENT_ID: #{CLIENT_ID}"
+puts "CLIENT_SECRET: #{CLIENT_SECRET}"
+puts "PAYPAL_API_BASE: #{PAYPAL_API_BASE}"
