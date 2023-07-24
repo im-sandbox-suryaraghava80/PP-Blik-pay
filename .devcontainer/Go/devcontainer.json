@@ -1,6 +1,6 @@
 // For more details, see https://aka.ms/devcontainer.json.
 {
-  "name": "Paying with Blik or Paypal on the web",
+  "name": "Go: Paying with Blik",
   "workspaceFolder": "/workspaces/PayPal-Codespaces/workspaces/Go",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
   "forwardPorts": [
