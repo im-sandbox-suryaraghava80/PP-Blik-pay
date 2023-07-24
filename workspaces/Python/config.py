@@ -12,6 +12,6 @@ is_prod = NODE_ENV == "production"
 
 PAYPAL_API_BASE = "https://api.paypal.com" if is_prod else "https://api.sandbox.paypal.com"
 
-print(f"NODE_ENV: {NODE_ENV}")
-print(f"CLIENT_ID: {CLIENT_ID}")
-print(f"CLIENT_SECRET: {CLIENT_SECRET}")
+# print(f"NODE_ENV: {NODE_ENV}")
+# print(f"CLIENT_ID: {CLIENT_ID}")
+# print(f"CLIENT_SECRET: {CLIENT_SECRET}")
