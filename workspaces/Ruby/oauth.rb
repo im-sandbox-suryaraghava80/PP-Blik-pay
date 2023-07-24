@@ -24,7 +24,3 @@ def get_access_token
   return data
 end
 
-# Sample usage
-# Replace this part with your actual usage of the access token
-data = get_access_token
-puts data
