@@ -1,8 +1,12 @@
 // For more details, see https://aka.ms/devcontainer.json.
 {
-  "name": "Go: Paying with Blik",
-  "workspaceFolder": "/workspaces/PayPal-Codespaces/workspaces/Go",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "name": "Ruby: Paying with Blik",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}/workspaces/Ruby",
+  "image": "ruby:latest",
+  "postCreateCommand": "bundle install",
+  "postAttachCommand": {
+    "Start server": "ruby sample.rb"
+  },
   "forwardPorts": [
     8080
   ],

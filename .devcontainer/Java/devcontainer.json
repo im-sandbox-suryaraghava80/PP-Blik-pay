@@ -1,8 +1,8 @@
 // For more details, see https://aka.ms/devcontainer.json.
 {
-  "name": "Paying with Blik or Paypal on the web",
+  "name": "Java: Paying with Blik",
   "workspaceFolder": "/workspaces/PayPal-Codespaces/workspaces/Java",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:20", 
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
   "forwardPorts": [
     8080
   ],

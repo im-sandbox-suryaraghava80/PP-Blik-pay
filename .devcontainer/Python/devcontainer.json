@@ -1,8 +1,12 @@
 // For more details, see https://aka.ms/devcontainer.json.
 {
-  "name": "Paying with Blik or Paypal on the web",
-  "workspaceFolder": "/workspaces/PayPal-Codespaces/workspaces/Python",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "name": "Python: Paying with Blik",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}/workspaces/Python",
+  "image": "mcr.microsoft.com/devcontainers/python:3",
+  "postCreateCommand": "pip install -r requirements.txt",
+  "postAttachCommand": {
+    "Start server": "python index.py"
+  },
   "forwardPorts": [
     8080
   ],
