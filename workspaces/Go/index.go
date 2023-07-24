@@ -1,7 +1,7 @@
 package main
 
 import (
-	oauth "blik-pay-GO/server/oauth"
+	oauth "PP-Blik-pay/server/oauth"
 	"fmt"
 	"log"
 	"mime"
