@@ -2,7 +2,7 @@
 {
     "name": "Paying with Blik or Paypal on the web",
     "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}/workspaces/Ruby",
-    "image": "mcr.microsoft.com/devcontainers/ruby:2",
+    "image": "ruby:latest",
     "postCreateCommand": "bundle install",
     "postAttachCommand": {
       "Start server": "ruby sample.rb"
