@@ -105,4 +105,5 @@ if __FILE__ == $0
   
   # Open the default web browser
   Launchy.open("http://localhost:#{port}/")
+  set :port, port
 end
