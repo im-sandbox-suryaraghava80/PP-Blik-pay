@@ -100,7 +100,7 @@ end
 
 
 if __FILE__ == $0
-  port = ENV['PORT'] || 4567
+  port = ENV['PORT'] || 8888
   puts "Starting server on port #{port}..."
   
   # Open the default web browser
