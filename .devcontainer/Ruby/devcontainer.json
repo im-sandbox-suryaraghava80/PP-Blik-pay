@@ -9,7 +9,6 @@
     "Start server": "ruby index.rb"
   },
   "forwardPorts": [
-    8080
   ],
   "portsAttributes": {
     "8080": {
