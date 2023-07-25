@@ -9,10 +9,10 @@
     "Start server": "ruby index.rb"
   },
   "forwardPorts": [
-    8888
+    4567,8080
   ],
   "portsAttributes": {
-    "8888": {
+    "8080": {
       "label": "Preview of Paying with Blik or Paypal on the web",
       "onAutoForward": "openBrowser"
     }
