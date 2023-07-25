@@ -4,7 +4,6 @@ import (
 	oauth "PP-Blik-pay/server/oauth"
 	"fmt"
 	"log"
-	"mime"
 	"net/http"
 	"os"
 	"os/exec"
@@ -61,27 +60,18 @@ func webhookHandler(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 }
 
-// Execute before the service runs.
-func init() {
-	log.Println("Initializing...")
-	FixMimeTypes()
-	_ = mime.AddExtensionType(".js", "text/javascript")
-}
-
-func FixMimeTypes() {
-	err1 := mime.AddExtensionType(".js", "text/javascript")
-	if err1 != nil {
-		log.Printf("Error in mime js %s", err1.Error())
-	}
-
-	err2 := mime.AddExtensionType(".css", "text/css")
-	if err2 != nil {
-		log.Printf("Error in mime js %s", err2.Error())
-	}
-}
-
 func main() {
 	r := mux.NewRouter()
+
+	r.HandleFunc("/static/index.js", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/javascript")
+		http.ServeFile(w, r, "static/index.js")
+	})
+
+	r.HandleFunc("/static/styles.css", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "text/css")
+		http.ServeFile(w, r, "static/styles.css")
+	})
 
 	r.HandleFunc("/", indexHandler).Methods("GET")
 	r.HandleFunc("/capture/{orderId}", captureHandler).Methods("POST")
