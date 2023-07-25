@@ -3,9 +3,10 @@
   "name": "Ruby: Paying with Blik",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}/workspaces/Ruby",
   "image": "ruby:latest",
-  "postCreateCommand": "bundle install",
+  "updateContentCommand": "bundle install",
+  "postCreateCommand": "",
   "postAttachCommand": {
-    "Start server": "ruby sample.rb"
+    "Start server": "ruby index.rb"
   },
   "forwardPorts": [
     8080
