@@ -6,8 +6,14 @@
   "updateContentCommand": "bundle install",
   "postCreateCommand": "",
   "postAttachCommand": {
-    "Start server": "ruby index.rb"
+    "server": "rails server"
   },
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "/workspaces/${localWorkspaceFolderBasename}/workspaces/Ruby/views/index.erb"
+      ]
+    },
   "forwardPorts": [
     8080
   ],
@@ -34,6 +40,7 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        "rebornix.Ruby",
         "vsls-contrib.codetour"
       ],
       "settings": {
