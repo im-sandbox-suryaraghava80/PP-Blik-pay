@@ -8,12 +8,6 @@
   "postAttachCommand": {
     "server": "rails server"
   },
-  "customizations": {
-    "codespaces": {
-      "openFiles": [
-        "/workspaces/${localWorkspaceFolderBasename}/workspaces/Ruby/views/index.erb"
-      ]
-    },
   "forwardPorts": [
     8080
   ],
@@ -38,6 +32,11 @@
     }
   },
   "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "/workspaces/${localWorkspaceFolderBasename}/workspaces/Ruby/views/index.erb"
+      ]
+    },
     "vscode": {
       "extensions": [
         "rebornix.Ruby",
