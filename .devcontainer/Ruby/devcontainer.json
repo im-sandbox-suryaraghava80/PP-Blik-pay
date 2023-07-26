@@ -2,7 +2,7 @@
 {
   "name": "Ruby: Paying with Blik",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}/workspaces/Ruby",
-  "image": "ruby:latest",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
   "updateContentCommand": "bundle install",
   "postCreateCommand": "",
   "postAttachCommand": {
