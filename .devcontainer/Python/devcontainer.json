@@ -1,19 +1,21 @@
 // For more details, see https://aka.ms/devcontainer.json.
 {
-  "name": "Python: Paying with Blik",
-  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}/workspaces/Python",
-  "image": "mcr.microsoft.com/devcontainers/python:3",
-  "postCreateCommand": "pip install -r requirements.txt",
-  "postAttachCommand": {
-    "Start server": "python index.py"
-  },
+  "name": "Ruby: Paying with Blik",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}/workspaces/Ruby",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "updateContentCommand": "bundle install",
+  "postCreateCommand": "",
+  "postAttachCommand": [
+     "ruby",
+     "index.rb"
+  ],
   "forwardPorts": [
-    8080
+    3000
   ],
   "portsAttributes": {
-    "8080": {
+    "3000": {
       "label": "Preview of Paying with Blik or Paypal on the web",
-      "onAutoForward": "openBrowser"
+      "onAutoForward": "openPreview"
     }
   },
   "secrets": {
@@ -31,8 +33,14 @@
     }
   },
   "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "/workspaces/${localWorkspaceFolderBasename}/workspaces/Ruby/views/index.erb"
+      ]
+    },
     "vscode": {
       "extensions": [
+        "rebornix.Ruby",
         "vsls-contrib.codetour"
       ],
       "settings": {
