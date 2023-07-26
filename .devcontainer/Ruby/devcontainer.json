@@ -6,18 +6,9 @@
   "updateContentCommand": "bundle install",
   "postCreateCommand": "",
   "postAttachCommand": [
-     "ruby",
-     "index.rb"
+    "ruby",
+    "index.rb"
   ],
-  "forwardPorts": [
-    8080
-  ],
-  "portsAttributes": {
-    "8080": {
-      "label": "Preview of Paying with Blik or Paypal on the web",
-      "onAutoForward": "openPreview"
-    }
-  },
   "secrets": {
     "CLIENT_ID": {
       "description": "Sandbox client ID of the application.",
@@ -44,7 +35,14 @@
         "vsls-contrib.codetour"
       ],
       "settings": {
-        "git.openRepositoryInParentFolders": "always"
+        "git.openRepositoryInParentFolders": "always",
+        "forwardPorts": [8080],
+        "portsAttributes": {
+          "8080": {
+            "label": "Preview of Paying with Blik or Paypal on the web",
+            "onAutoForward": "openPreview"
+          }
+        }
       }
     }
   }
