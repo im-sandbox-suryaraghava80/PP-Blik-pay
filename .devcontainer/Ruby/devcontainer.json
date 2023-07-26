@@ -5,9 +5,10 @@
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "updateContentCommand": "bundle install",
   "postCreateCommand": "",
-  "postAttachCommand": {
-    "server": "rails server"
-  },
+  "postAttachCommand": [
+     "ruby",
+     "index.rb"
+  ],
   "forwardPorts": [
     3000
   ],
